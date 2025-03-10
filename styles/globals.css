@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-web3-dark text-web3-light min-h-screen;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-all duration-200;
+  }
+  
+  .btn-primary {
+    @apply btn bg-web3-primary text-white hover:bg-opacity-80;
+  }
+  
+  .btn-secondary {
+    @apply btn bg-web3-secondary text-white hover:bg-opacity-80;
+  }
+  
+  .card {
+    @apply bg-slate-800 rounded-xl p-4 border border-slate-700 shadow-lg;
+  }
+
+  .glow-border {
+    @apply border-2 border-web3-primary rounded-xl;
+    box-shadow: 0 0 15px theme('colors.web3.primary');
+  }
+}
