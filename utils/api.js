@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Base URL for API calls
 const baseUrl = process.env.NODE_ENV === 'production' 
-  ? 'https://your-production-url.vercel.app/api' 
+  ? 'https://web3-analysis-dashboard.vercel.app/api' // Ganti dengan URL proyekmu
   : 'http://localhost:3000/api';
 
 // Fetch crypto prices
