@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Base URL for API calls
-const baseUrl = process.env.NODE_ENV === 'production' 
+const baseUrl = process.env.NODE_ENV === 'production'
   ? 'https://web3-analysis-dashboard.vercel.app/api' // Ganti dengan URL proyekmu
   : 'http://localhost:3000/api';
 
@@ -30,7 +30,9 @@ export const fetchAirdrops = async () => {
 // Get AI analysis for a specific coin
 export const getAIAnalysis = async (coinId) => {
   try {
-    const response = await axios.post(`${baseUrl}/ai-analysis`, { coinId });
+    const response = await axios.get(`${baseUrl}/ai-analysis`, {
+      params: { coinId }
+    });
     return response.data;
   } catch (error) {
     console.error('Error getting AI analysis:', error);
